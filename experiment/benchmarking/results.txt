@@ -1,0 +1,11 @@
+model: Spark-TTS-0.5B
+num_samples: 310
+MCD: 7.0166 ± 0.1169
+LSD: 2.7917 ± 0.0619
+SSIM: 0.9190 ± 0.0028
+
+model: Tacotron-HifiGAN (no FT)
+num_samples: 310
+MCD: 7.8464 ± 0.1093
+LSD: 5.0087 ± 0.0566
+SSIM: 0.8733 ± 0.0029
