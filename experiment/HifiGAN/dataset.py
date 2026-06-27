@@ -323,13 +323,16 @@ class MelDataset(Dataset):
         filename = self.audio_files[index]
 
         audio, sampling_rate = torchaudio.load(filename)
-        
-        audio = audio / torch.max(audio) * self.max_audio_magnitude
 
         if sampling_rate != self.sampling_rate:
-            raise ValueError("{} SR doesn't match target {} SR".format(
-                sampling_rate, self.sampling_rate))
+            audio = torchaudio.functional.resample(
+                audio,
+                orig_freq=sampling_rate,
+                new_freq=self.sampling_rate
+            )
 
+        audio = audio / torch.max(audio) * self.max_audio_magnitude
+        
         if not self.finetuning:
 
             if audio.shape[1] >= self.segment_size:
