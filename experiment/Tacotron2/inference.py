@@ -31,7 +31,7 @@ model = Tacotron2(config)
 tokenizer = Tokenizer()
 a2m = AudioMelConversions()
 
-state_dict = torch.load('tacotron2/final_checkpoint/pytorch_model.bin', map_location=torch.device('cuda'))
+state_dict = torch.load('/home/app/translate-topic/cuonglp1/TRAIN_phase_01/tacotron2/best_checkpoint/ver_4_0_0_1200/pytorch_model.bin', map_location=torch.device('cuda'))
 model.load_state_dict(state_dict)
 model.eval()
 
@@ -55,7 +55,7 @@ generator.eval()
 generator.remove_weight_norm()
 
 generator_total_params = sum(p.numel() for p in generator.parameters())
-print("TotalHifi-GAN parameters:", generator_total_params)
+print("Total Hifi-GAN parameters:", generator_total_params)
 
 
 def refine_mel_for_hifigan(
@@ -181,6 +181,6 @@ def infer_tacotron2_hifigan(count: int):
     # print(len(os.listdir('data_309/wavs')))
 
 if __name__ == "__main__":
-    infer('xin chào địa phương', 'results/test1.wav')
+    infer('là người cần cù chịu khó', 'results/test16.wav')
 
 
