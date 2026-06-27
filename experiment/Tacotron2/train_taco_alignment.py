@@ -161,7 +161,7 @@ def main():
     path_to_experiment = os.path.join(args.working_directory, args.experiment_name)
     accelerator = Accelerator(project_dir=path_to_experiment, log_with="wandb" if args.log_wandb else None)
 
-    if args.log_wandb:rè
+    if args.log_wandb:
         accelerator.init_trackers(project_name=args.experiment_name, init_kwargs={"wandb": {"name": args.run_name}})
 
     accelerator.print(args)

@@ -89,4 +89,5 @@ def inference_tacotron2_hifigan(input_csv: str, output_folder: str, num: int):
     
     
 if __name__ == "__main__":
-    inference_tacotron2_hifigan('../benchmarking/test/metadata.csv', '../benchmarking/infer_tacotron2_hifigan', 0)
+    # inference_tacotron2_hifigan('../benchmarking/test/metadata.csv', '../benchmarking/infer_tacotron2_hifigan', 0)
+    inference('và thực hiện các quy định của pháp luận để bảo vệ môi trường với', 'results/test3.wav')

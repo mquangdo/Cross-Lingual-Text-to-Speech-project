@@ -181,6 +181,6 @@ def infer_tacotron2_hifigan(count: int):
     # print(len(os.listdir('data_309/wavs')))
 
 if __name__ == "__main__":
-    infer('và thực hiện các quy định của pháp luận về bảo vệ môi trường', 'test.wav')
+    infer('xin chào địa phương', 'results/test1.wav')
 
 

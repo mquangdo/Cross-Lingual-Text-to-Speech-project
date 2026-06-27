@@ -1,0 +1,33 @@
+__pycache__/
+.ipynb_checkpoints/
+
+## benchmarking
+benchmarking/infer_sparktts_0
+benchmarking/infer_tacotron2_hifigan_0
+benchmarking/test
+benchmarking/wandb
+
+## HifiGAN
+HifiGAN/hifigan
+HifiGAN/work_dir
+HifiGAN/wandb
+HifiGAN/data
+
+#Spark-TTS
+Spark-TTS/finetuned_models
+Spark-TTS/wandb
+
+## Spark-TTS-finetune
+Spark-TTS-finetune/data
+Spark-TTS-finetune/last_run_prepared
+Spark-TTS-finetune/output_prompts_train
+Spark-TTS-finetune/outputs_vietmuong
+Spark-TTS-finetune/pretrained_models
+Spark-TTS-finetune/wandb
+
+
+## Tacotron2
+Tacotron2/data
+Tacotron2/regotron
+Tacotron2/tacotron2
+Tacotron2/wandb
