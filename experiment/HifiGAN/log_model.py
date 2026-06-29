@@ -11,7 +11,7 @@ artifact = wandb.Artifact(
     type="model"
 )
 
-artifact.add_dir("work_dir/hifigan")
+artifact.add_dir("work_dir_finetune/hifigan_finetune_taco")
 
 run.log_artifact(artifact)
 
