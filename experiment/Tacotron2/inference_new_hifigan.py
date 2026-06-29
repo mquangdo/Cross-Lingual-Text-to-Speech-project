@@ -27,6 +27,7 @@ tacotron2.eval().to('cuda')
 config = HIFIGANConfig()
 hifigan = HIFIGAN(config)
 
+# file_path = "../HifiGAN/work_dir_finetune/hifigan_finetune_taco/checkpoint_60/model.safetensors"
 file_path = "../HifiGAN/work_dir/hifigan/final_checkpoint/model.safetensors"
 state_dict = load_file(file_path, device="cuda")
 
@@ -89,5 +90,5 @@ def inference_tacotron2_hifigan(input_csv: str, output_folder: str, num: int):
     
     
 if __name__ == "__main__":
-    inference_tacotron2_hifigan('../benchmarking/test/metadata.csv', '../benchmarking/infer_tacotron2_hifigan', 3)
-    # inference('xin chào địa phương', 'results/test17.wav')
+    # inference_tacotron2_hifigan('../benchmarking/test/metadata.csv', '../benchmarking/infer_tacotron2_hifigan', 4)
+    inference('việt nam ưu tiên dùng hàng việt nam', 'results/test27.wav')
